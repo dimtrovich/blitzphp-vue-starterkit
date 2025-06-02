@@ -1,7 +1,8 @@
 {
-    "name": "blitz-php/app-skeleton",
-    "description": "Skeleton App for Blitz framework",
+    "name": "dimtrovich/blitzphp-vue-starterkit",
     "type": "project",
+    "description": "Kit de démarrage pour des applications BlitzPHP + Vue.Js",
+    "homepage": "https://github.com/dimtrovich/blitzphp-vue-starterkit",
     "license": "MIT",
     "authors": [
         {
@@ -9,17 +10,21 @@
             "email": "dimitrisitchet@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        }
-    },
-    "require": {
+        "require": {
+        "php": ">=8.1",
         "blitz-php/framework": "^0.12",
         "dimtrovich/blitzphp-vite": "^1.1"
     },
     "require-dev": {
         "filp/whoops": "^2.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
     },
     "scripts": {
        "post-update-cmd": [
@@ -39,5 +44,8 @@
         "sort-packages": true
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "support": {
+        "source": "https://github.com/dimtrovich/blitzphp-vue-starterkit"
+    }
 }
