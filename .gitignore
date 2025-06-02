@@ -60,6 +60,13 @@ tests/coverage*
 phpunit
 
 #-------------------------
+# Node Modules
+#-------------------------
+node_modules/
+yarn.lock
+package-lock.json
+
+#-------------------------
 # Composer
 #-------------------------
 vendor/
@@ -112,3 +119,4 @@ nb-configuration.xml
 **/debugbar/**
 **/cache/**
 /storage/framework/session
+/node_modules

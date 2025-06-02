@@ -1,0 +1,89 @@
+#--------------------------------------------------------------------
+# Exemple de fichier de configuration d'environnement
+#
+# Ce fichier peut être utilisé comme point de départ pour vos propres fichiers .env personnalisés,
+# et contient la plupart des paramètres possibles disponibles dans une installation par défaut.
+#
+# Par défaut, tous les paramètres sont commentés.
+# Si vous souhaitez remplacer le paramètre, vous devez le dé-commenter en supprimant le '#' au début de la ligne.
+#--------------------------------------------------------------------
+
+#--------------------------------------------------------------------
+# ENVIRONNEMENT
+#--------------------------------------------------------------------
+
+# ENVIRONMENT = production
+
+#--------------------------------------------------------------------
+# APPLICATION
+#--------------------------------------------------------------------
+
+# app.baseURL = ''
+app.name = 'BlitzPHP App Skeleton'
+
+#--------------------------------------------------------------------
+# BASE DE DONNEES
+#--------------------------------------------------------------------
+
+# db.default.hostname = localhost
+# db.default.database = blitzapp
+# db.default.username = root
+# db.default.password = root
+# db.default.driver = pdomysql
+# db.default.prefix =
+# db.default.port = 3306
+
+# db.tests.hostname = localhost
+# db.tests.database = blitzapp_test
+# db.tests.username = root
+# db.tests.password = root
+# db.tests.driver = pdomysql
+# db.tests.prefix =
+# db.tests.port = 3306
+
+#--------------------------------------------------------------------
+# MAIL
+#--------------------------------------------------------------------
+
+# mail.protocol = smtp
+# mail.host = localhost
+# mail.port = 1025
+# mail.encryption = none
+# mail.username = 
+# mail.password = 
+# mail.from.address = 
+# mail.from.name = "${app.name}"
+
+#--------------------------------------------------------------------
+# COOKIE
+#--------------------------------------------------------------------
+
+# cookie.prefix = ''
+# cookie.expires = 0
+# cookie.path = '/'
+# cookie.domain = ''
+# cookie.secure = false
+# cookie.httponly = false
+# cookie.samesite = 'Lax'
+# cookie.raw = false
+
+#--------------------------------------------------------------------
+# ENCRYPTION
+#--------------------------------------------------------------------
+
+encryption.key="hex2bin:7b41fcbb077b206d9c497f39adba79fc8e68f2a44cc098d2fb5399e80a144284"
+# encryption.driver = OpenSSL
+# encryption.blockSize = 16
+# encryption.digest = SHA512
+
+#--------------------------------------------------------------------
+# SESSION
+#--------------------------------------------------------------------
+
+# session.driver = 'BlitzPHP\Session\Handlers\File'
+# session.cookieName = 'blitz_session'
+# session.expiration = 7200
+# session.savePath = null
+# session.matchIP = false
+# session.timeToUpdate = 300
+# session.regenerateDestroy = false
