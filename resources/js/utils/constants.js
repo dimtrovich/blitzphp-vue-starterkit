@@ -1,12 +1,12 @@
 /**
  * @var {string} API_URL URL de base de l'API
  */
-export const API_URL = import.meta.env.DEV ? (import.meta.env.VITE_API_URL || 'http://localhost/api') : (import.meta.env.VITE_API_PROD_URL || (import.meta.env.VITE_API_URL || 'http://localhost/api'))
+export const API_URL = import.meta.env.DEV ? (import.meta.env.VITE_API_URL || 'http://localhost:3300/api') : (import.meta.env.VITE_API_PROD_URL || (import.meta.env.VITE_API_URL || 'http://localhost:3300/api'))
 
 /**
  * @var {string} APP_NAME Nom de l'application
  */
-export const APP_NAME = import.meta.env.VITE_APP_NAME || 'Vue3 Starter Kit'
+export const APP_NAME = import.meta.env.VITE_APP_NAME || 'BlitzPHP Vue3 Starter Kit'
 
 /**
  * @var {string} APP_ID ID de l'application
@@ -22,6 +22,11 @@ export const AVAILABLE_LOCALES = (import.meta.env.VITE_AVAILABLE_LOCALES || 'fr,
  * @var {string[]} DEFAULT_LOCALE Langue par défaut
  */
 export const DEFAULT_LOCALE = import.meta.env.VITE_DEFAULT_LOCALE || 'fr'
+
+/**
+ * @var {string} APP_TIMEZONE Fuseau horaire par defaut de l'application
+ */
+export const APP_TIMEZONE = import.meta.env.DEV ? (import.meta.env.VITE_APP_TIMEZONE || 'Africa/Douala') : 'Africa/Douala'
 
 /**
  * @var {string[]} ROUTES_EMPTY_LAYOUT Routes qui utiliseront le layout 'empty'

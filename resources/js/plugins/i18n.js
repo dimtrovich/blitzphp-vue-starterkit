@@ -1,7 +1,7 @@
 import { createI18n } from 'vue-i18n'
 
+import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from '../utils/constants'
 import { $storage } from './storage'
-import { findLocale } from '@/utils/helpers'
 
 const messages = loadLocaleMessages()
 
@@ -17,14 +17,35 @@ export const { t: $t } = $i18n
 
 export function changeLanguage(language) {
 	$storage.cookie.set('locale', language)
+	document.querySelector('html').setAttribute('lang', language)
+
 	i18n.global.locale = language
-	$i18n.locale = language
+	$i18n.locale       = language
 }
 
 export default function(app) {
 	app.use(i18n)
 
 	return app
+}
+
+/**
+ * Recupere la langue a utilier par defaut
+ *
+ * @return {String}
+ */
+export function findLocale() {
+	let lang = $storage.cookie.get('locale')
+
+	if (lang == null || lang == undefined || !lang || typeof lang == 'undefined') {
+		lang = (window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage).substr(0, 2).toLowerCase()
+	}
+
+	if (!AVAILABLE_LOCALES.includes(lang)) {
+		lang = DEFAULT_LOCALE
+	}
+
+	return lang
 }
 
 function loadLocaleMessages() {

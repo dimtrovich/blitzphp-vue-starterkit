@@ -1,28 +1,8 @@
 import { is_string } from 'php-in-js/modules/types'
 import { trim } from 'php-in-js/modules/string'
 
-import { AVAILABLE_LOCALES, DEFAULT_LOCALE, LOGIN_NOT_REDIRECTABLE } from './constants'
-import { $storage } from '@/plugins/storage'
+import { LOGIN_NOT_REDIRECTABLE } from './constants'
 import router from '@/router'
-
-/**
- * Recupere la langue a utilier par defaut
- *
- * @return {String}
- */
-export function findLocale() {
-	let lang = $storage.cookie.get('locale')
-
-	if (lang == null || lang == undefined || !lang || typeof lang == 'undefined') {
-		lang = (window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage).substr(0, 2).toLowerCase()
-	}
-
-	if (!AVAILABLE_LOCALES.includes(lang)) {
-		lang = DEFAULT_LOCALE
-	}
-
-	return lang
-}
 
 /**
  * Regroupe un tableau d'objet par cle
