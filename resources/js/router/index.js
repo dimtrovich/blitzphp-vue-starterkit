@@ -31,6 +31,7 @@ Object.entries(files).forEach(([, definition]) => {
 })
 
 for (const route of routes) {
+	// eslint-disable-next-line no-unused-vars
 	for (const key in route) {
 		const meta = route.meta || {}
 		if (!meta.layout) {

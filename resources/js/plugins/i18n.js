@@ -17,6 +17,7 @@ export const { t: $t } = $i18n
 
 export function changeLanguage(language) {
 	$storage.cookie.set('locale', language)
+	// eslint-disable-next-line no-undef
 	document.querySelector('html').setAttribute('lang', language)
 
 	i18n.global.locale = language
@@ -38,6 +39,7 @@ export function findLocale() {
 	let lang = $storage.cookie.get('locale')
 
 	if (lang == null || lang == undefined || !lang || typeof lang == 'undefined') {
+		// eslint-disable-next-line no-undef
 		lang = (window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage).substr(0, 2).toLowerCase()
 	}
 
