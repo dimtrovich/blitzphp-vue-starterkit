@@ -48,8 +48,8 @@
                     <h3 class="text-lg fw-bold mb-3">Go Further</h3>
                     <p class="my-3">Here are some useful links</p>
                     <ul class="list-unstyled">
-                        <li><a href="https://github.com/dimtrovich/blitzphp-vuejs" target="_blank"><i class="bi bi-link-45deg"></i> BlitzPHP Vue Repository</a></li>
-                        <li><a href="http://blitz-php.byethost14.com/docs" target="_blank"><i class="bi bi-link-45deg"></i> BlitzPHP Official User Guide</a></li>
+                        <li><a href="https://github.com/dimtrovich/blitzphp-vue-starterkit" target="_blank"><i class="bi bi-link-45deg"></i> BlitzPHP Vue Repository</a></li>
+                        <li><a href="https://blitz-php.byethost14.com/docs" target="_blank"><i class="bi bi-link-45deg"></i> BlitzPHP Official User Guide</a></li>
                         <li><a href="https://vuejs.org/" target="_blank"><i class="bi bi-link-45deg"></i> VueJs Documentation</a></li>
                     </ul>
                 </section>

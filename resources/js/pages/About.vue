@@ -17,15 +17,17 @@
                 <div v-else>
                     <p>This is a simple fetching example using <code class="bg-dark-500 bg-opacity-50 p-1">axios</code></p>
                     <table v-if="typeof fetchedData === 'object'" class="w-max mx-auto my-5 children:(border-b border-slate-600 last:!border-none)">
-                        <tr v-for="(item, i) in fetchedData" :key="i">
-                            <td class="p-2">{{ item.name }}</td>
-                            <td class="p-2">{{ item.version }}</td>
-                        </tr>
-                        <tr class="border-none">
-                            <td colspan="2" class="text-center">
-                                <button class="px-3 py-2 bg-primary-500 mt-5 rounded" @click="fetching">Refresh</button>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr v-for="(item, i) in fetchedData" :key="i">
+                                <td class="p-2">{{ item.name }}</td>
+                                <td class="p-2">{{ item.version }}</td>
+                            </tr>
+                            <tr class="border-none">
+                                <td colspan="2" class="text-center">
+                                    <button class="px-3 py-2 bg-primary-500 mt-5 rounded" @click="fetching">Refresh</button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                     <p v-else class="my-3 text-red-500 font-bold">
                         {{ fetchedData }}
