@@ -3,7 +3,7 @@ import { provide, shallowRef } from 'vue'
 import { useMeta } from 'vue-meta'
 
 import { APP_NAME } from '@/utils/constants'
-import { findLocale } from '@/utils/helpers'
+import { findLocale } from '@/plugins/i18n'
 import router from '@/router'
 
 const layout = shallowRef('div')
