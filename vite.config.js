@@ -17,7 +17,7 @@ export default defineConfig(() => {
 		],
 		build: {
 			assetsDir: env.VITE_BUILD_DIR,
-			emptyOutDir: false,
+			emptyOutDir: true,
 			manifest: true,
 			outDir: './public/',
 			rollupOptions: {
