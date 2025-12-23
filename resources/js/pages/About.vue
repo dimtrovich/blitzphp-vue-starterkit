@@ -46,9 +46,9 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
-import { useMeta } from 'vue-meta'
+import { useHead } from '@unhead/vue'
 
-useMeta({
+useHead({
 	title: 'About application',
 })
 

@@ -59,11 +59,11 @@
 </template>
 
 <script setup>
-import { useMeta } from 'vue-meta'
+import { useHead } from '@unhead/vue';
 
 defineOptions({ name: 'HomePage' })
 
-useMeta({
+useHead({
 	title: 'Home page',
 })
 </script>

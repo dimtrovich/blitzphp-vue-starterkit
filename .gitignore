@@ -120,3 +120,4 @@ nb-configuration.xml
 **/cache/**
 /storage/framework/session
 /node_modules
+/pnpm-lock.yaml
