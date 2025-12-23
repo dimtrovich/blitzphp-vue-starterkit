@@ -6,7 +6,7 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig(() => {
-	const env = loadEnv(null, process.cwd())
+	const env = loadEnv('', process.cwd())
 
 	return {
 		plugins: [
@@ -19,7 +19,7 @@ export default defineConfig(() => {
 			assetsDir: env.VITE_BUILD_DIR,
 			emptyOutDir: true,
 			manifest: true,
-			outDir: './public/',
+			outDir: './dist/',
 			rollupOptions: {
 				input: `./${env.VITE_RESOURCES_DIR}/${env.VITE_ENTRY_FILE}`,
 			},
@@ -27,7 +27,7 @@ export default defineConfig(() => {
 		server: {
 			hmr: true,
 			origin: env.VITE_ORIGIN,
-			port: env.VITE_PORT,
+			port: Number(env.VITE_PORT),
 			strictPort: true,
 		},
 		resolve: {

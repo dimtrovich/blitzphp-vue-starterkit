@@ -37,7 +37,7 @@
 
             <hr class="my-5 border-slate-600" />
 
-            <p>This file lives in <code class="bg-dark-500 bg-opacity-50 p-1">resources/js/pages/about.vue</code> feel free to edit or remove it</p>
+            <p>This file lives in <code class="bg-dark-500 bg-opacity-50 p-1">src/pages/about.vue</code> feel free to edit or remove it</p>
 
         </div>
     </main>
