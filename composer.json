@@ -11,7 +11,7 @@
         }
     ],
         "require": {
-        "php": ">=8.1",
+        "php": "^8.2",
         "blitz-php/framework": "^0.12",
         "dimtrovich/blitzphp-vite": "^1.1"
     },
@@ -27,6 +27,17 @@
         ]
     },
     "scripts": {
+        "setup": [
+            "composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php klinge key:generate",
+            "npm install",
+            "npm run build"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php klinge serve\" \"npm run dev\" --names=server,vite --kill-others"
+        ],
        "post-update-cmd": [
             "BlitzPHP\\Initializer\\ComposerScripts::postUpdate",
             "@php klinge publish"

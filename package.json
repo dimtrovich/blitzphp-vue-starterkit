@@ -3,11 +3,13 @@
 	"private": true,
 	"version": "0.0.0",
 	"scripts": {
-		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-		"format": "prettier --write src/"
+        "build:ssr": "vite build && vite build --ssr",
+		"dev": "vite",
+		"format": "prettier --write src/",
+        "format:check": "prettier --check src/",
+		"lint": "eslint . --fix",
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@unhead/vue": "^2.0.19",
@@ -28,6 +30,7 @@
 		"@stylistic/eslint-plugin-js": "^4.4.1",
 		"@vitejs/plugin-vue": "^6.0.3",
 		"@vue/eslint-config-prettier": "^10.2.0",
+		"concurrently": "^9.2.1",
 		"eslint": "^9.39.2",
 		"eslint-plugin-vue": "^10.6.2",
 		"prettier": "^3.7.4",
