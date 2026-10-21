@@ -30,7 +30,7 @@ class HomeController
             ],
             [
                 'name'  => 'ViteJs',
-                'version'  => 'v7'
+                'version'  => 'v8'
             ]
         ];
     }
